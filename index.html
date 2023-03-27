@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scoreboard with HTML, CSS & JavaScript</title>
+	<link rel="stylesheet" href="main.css">
+    <!-- <script src="why.js" type="module"></script> -->
+    <script src="why.js" type="module"></script>
+</head>
+<body>
+	<div id="app">
+        <div class="scoreboard">
+            <div class="scoreboard__name scoreboard__name--one">Player One</div>
+            <div class="scoreboard__name scoreboard__name--two">Player Two</div>
+            <div class="scoreboard__score" data-for-player="one">0</div>
+            <div class="scoreboard__score" data-for-player="two">0</div>
+            <div class="scoreboard__controls" data-for-player="one">
+                <button class="scoreboard__control-button">-</button>
+                <button class="scoreboard__control-button">+</button>
+            </div>
+            <div class="scoreboard__controls" data-for-player="two">
+                <button class="scoreboard__control-button">-</button>
+                <button class="scoreboard__control-button">+</button>
+            </div>
+        </div>
+    </div>
+	
+</body>
+</html>
