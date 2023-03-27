@@ -1,7 +1,7 @@
 import ScoreboardView from "./scoreboard/ScoreboardView.js";
 
-let playerOneScore = 0;
-let playerTwoScore = 0;
+let playerOneScore ;
+let playerTwoScore ;
 const root = document.querySelector("#app");
 const view = new ScoreboardView(root, "Player One", "Player Two", (player, direction) => {
 	const difference = direction === "minus" ? -1 : 1;
