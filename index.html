@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard Example</title>
+  <script src="index.js"></script>
+</head>
+<body>
+  <h1>Leaderboard</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="score">Score:</label>
+    <input type="number" id="score">
+    <button type="button" onclick="addToLeaderboard()">Add to Leaderboard</button>
+  </form>
+  <table id="leaderboard">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- leaderboard rows will be dynamically added here -->
+    </tbody>
+  </table>
+  <button type="button" onclick="downloadLeaderboard()">Download Leaderboard</button>
+  <button type="button" onclick="loadLeaderboard()">Load Leaderboard</button>
+</body>
+</html>
