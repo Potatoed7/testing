@@ -69,7 +69,7 @@ function updateLeaderboardData(playerName, playerScore) {
     } else {
       console.error("Error updating leaderboard: " + xhr.statusText);
         
-      div.innerText = "failed";
+      div.innerText = "failed" + xhr.statusText;
       // handle error if update fails
     }
   };
