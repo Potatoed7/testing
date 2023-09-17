@@ -52,7 +52,7 @@ function downloadLeaderboard() {
 }
 
 
-
+/*
 function updateLeaderboardData(playerName, playerScore) {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", "https://github.com/Potatoed7/testing/blob/main/update-leaderboard.php"); // replace with your server-side script or API URL
@@ -84,7 +84,7 @@ function updateLeaderboardData(playerName, playerScore) {
 
   body.append(div);
 }
-
+*/
 
 
 // function to load leaderboard from JSON file
