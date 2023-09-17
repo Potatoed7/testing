@@ -5,6 +5,25 @@ let leaderboardData = [];
 
 // function to add data to leaderboard
 function addToLeaderboard() {
+    
+    const newScore = { name: "Player Name", score: 100 };
+fetch("https://leaderboard-test-4112f.firebaseio.com/leaderboard.json", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(newScore),
+})
+.then(response => {
+  if (response.ok) {
+    console.log("Score added successfully");
+    // Handle success
+  } else {
+    console.error("Error adding score");
+    // Handle error
+  }
+});
+    
     // get the leaderboard table and form elements
 const leaderboardTable = document.getElementById("leaderboard");
 const nameInput = document.getElementById("name");
