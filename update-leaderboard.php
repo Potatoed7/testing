@@ -21,3 +21,4 @@ file_put_contents('leaderboard.json', json_encode($leaderboardData));
 // send a response to confirm that the leaderboard was updated
 header('Content-Type: application/json');
 echo json_encode(array('success' => true));
+?>
