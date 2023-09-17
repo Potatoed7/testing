@@ -55,7 +55,7 @@ function downloadLeaderboard() {
 
 function updateLeaderboardData(playerName, playerScore) {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/update-leaderboard.php"); // replace with your server-side script or API URL
+  xhr.open("POST", "https://potatoed7.github.io/testing/update-leaderboard.php"); // replace with your server-side script or API URL
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     
   let div = document.getElementById("result");
