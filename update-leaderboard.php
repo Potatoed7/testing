@@ -16,7 +16,7 @@ usort($leaderboardData, function($a, $b) {
 });
 
 // write the updated leaderboard data to the JSON file
-file_put_contents('leaderboard.json', json_encode($leaderboardData));
+echo file_put_contents('leaderboard.json', json_encode($leaderboardData));
 
 // send a response to confirm that the leaderboard was updated
 header('Content-Type: application/json');
