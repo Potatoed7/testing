@@ -51,6 +51,31 @@ function downloadLeaderboard() {
   URL.revokeObjectURL(url);
 }
 
+
+
+function updateLeaderboardData(playerName, playerScore) {
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST", "/update-leaderboard.php"); // replace with your server-side script or API URL
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      console.log("Leaderboard updated successfully!");
+      // do something after leaderboard has been updated
+    } else {
+      console.error("Error updating leaderboard: " + xhr.statusText);
+      // handle error if update fails
+    }
+  };
+  xhr.onerror = function() {
+    console.error("Error updating leaderboard: " + xhr.statusText);
+    // handle error if AJAX request fails
+  };
+  const requestBody = JSON.stringify({ name: playerName, score: playerScore });
+  xhr.send(requestBody);
+}
+
+
+
 // function to load leaderboard from JSON file
 function loadLeaderboard() {
   fetch("leaderboard.json")
