@@ -57,21 +57,32 @@ function updateLeaderboardData(playerName, playerScore) {
   const xhr = new XMLHttpRequest();
   xhr.open("POST", "/update-leaderboard.php"); // replace with your server-side script or API URL
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    
+  let div = document.getElementById("result");
+    
   xhr.onload = function() {
     if (xhr.status === 200) {
       console.log("Leaderboard updated successfully!");
+        
+      div.innerText = "Done Yay";
       // do something after leaderboard has been updated
     } else {
       console.error("Error updating leaderboard: " + xhr.statusText);
+        
+      div.innerText = "failed";
       // handle error if update fails
     }
   };
   xhr.onerror = function() {
     console.error("Error updating leaderboard: " + xhr.statusText);
+
+    div.innerText = "fail2";
     // handle error if AJAX request fails
   };
   const requestBody = JSON.stringify({ name: playerName, score: playerScore });
   xhr.send(requestBody);
+
+  body.append(div);
 }
 
 
