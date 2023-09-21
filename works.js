@@ -2,7 +2,6 @@
 let leaderboardData = [];
 
 
-
 // function to add data to leaderboard
 function addToLeaderboard() {
     
