@@ -14,7 +14,7 @@
     <input type="text" id="name">
     <label for="score">Score:</label>
     <input type="number" id="score">
-    <button type="button" onclick="addToLeaderboard()">Add to Leaderboard</button>
+    <button type="button" onclick="addToLeaderboard(), sendtoFB()">Add to Leaderboard</button>
   </form>
   <table id="leaderboard">
     <thead>
@@ -58,6 +58,18 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const database = getDatabase(app);
+
+
+    function sendToFB() {
+  // get input values and create new player object
+  const playerName = nameInput.value;
+  const playerScore = Number(scoreInput.value);
+  const newPlayer = { name: playerName, score: playerScore };
+
+    
+
+ref(database, JSON.stringify(newPlayer))
+
   </script>
 </body>
 </html>
