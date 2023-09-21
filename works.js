@@ -17,7 +17,7 @@ const scoreInput = document.getElementById("score");
 
     
 
-fetch("https://leaderboard-test-4112f-default-rtdb.asia-southeast1.firebasedatabase.app", {
+fetch("https://leaderboard-test-4112f.asia-southeast1.firebasedatabase.app", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
