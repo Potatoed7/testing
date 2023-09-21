@@ -27,10 +27,11 @@ fetch("https://leaderboard-test-4112f.firebaseio.com/leaderboard.json", {
 .then(response => {
   if (response.ok) {
     console.log("Score added successfully");
-      body.innerText = works
+      body.innerText = "works";
     // Handle success
   } else {
     console.error("Error adding score");
+      body.innerText = "fail";
     // Handle error
   }
 });
