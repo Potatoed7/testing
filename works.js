@@ -27,11 +27,11 @@ fetch("https://leaderboard-test-4112f-default-rtdb.asia-southeast1.firebasedatab
 .then(response => {
   if (response.ok) {
     console.log("Score added successfully");
-      body.innerText = "works";
+      
     // Handle success
   } else {
     console.error("Error adding score");
-      body.innerText = "fail";
+      
     // Handle error
   }
 });
