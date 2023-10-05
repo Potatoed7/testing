@@ -60,7 +60,9 @@
     const database = getDatabase(app);
 
 
-    function sendToFB() {
+function sendToFB() {
+  const nameInput = document.getElementById("name");
+  const scoreInput = document.getElementById("score");
   // get input values and create new player object
   const playerName = nameInput.value;
   const playerScore = Number(scoreInput.value);
@@ -68,7 +70,8 @@
 
     
 
-ref(database, JSON.stringify(newPlayer))
+  ref(database, JSON.stringify(newPlayer))
+};
 
   </script>
 </body>
